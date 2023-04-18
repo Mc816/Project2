@@ -20,7 +20,7 @@ export default function App() {
     "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=f966a17d28b5a346ea629ed086e21e18";
 
   const url2 =
-    "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=abf161aee5984c1a8ed10a27af44a901";
+    "https://api.thenewsapi.com/v1/news/top?api_token=DKyVxQSlCk2V88ATLMDLwpbtPyvxEEqGqrbfwWUo";
 
   const url3 =
     "https://gnews.io/api/v4/top-headlines?category=general&lang=en&apikey=f966a17d28b5a346ea629ed086e21e18";
@@ -31,7 +31,8 @@ export default function App() {
       const response3 = await axios.get(url3);
       //console.log(response.data);
       setTechInfo(response.data.articles);
-      setBusInfo(response2.data.articles);
+      setBusInfo(response2.data.data);
+      console.log(busInfo);
       setTopInfo(response3.data.articles);
       //setTechInfo(response.data);
     } catch (err) {
@@ -53,9 +54,12 @@ export default function App() {
         <Route path="/buslist" element={<BusList busList={busInfo} />} />
         <Route path="/techlist" element={<TechList techList={techInfo} />} />
         <Route path="/toplist" element={<TopList topList={topInfo} />} />
-        <Route path="/techpage/:title" element={<TechPage />} />
-        <Route path="/buspage/:symbol" element={<BusPage />} />
-        <Route path="/toppage/:symbol" element={<TopPage />} />
+        <Route
+          path="/techpage/:title"
+          element={<TechPage techList={techInfo} />}
+        />
+        <Route path="/buspage/:title" element={<BusPage busList={busInfo} />} />
+        <Route path="/toppage/:title" element={<TopPage topPage={topInfo} />} />
       </Routes>
     </div>
   );

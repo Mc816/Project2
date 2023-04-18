@@ -3,21 +3,22 @@ import { useParams } from "react-router-dom";
 //import axios from "axios";
 
 export default function TechPage(props) {
-  //const { title } = useParams();
-
   const params = useParams();
 
   const titleParm = params.title;
 
   const newTitle = props.techList.find((t) => {
     return titleParm === t.title;
-    console.log(newTitle);
   });
+  console.log(newTitle);
 
   return (
     <>
       <h1>{newTitle.title}</h1>
+      <img src={newTitle.image} />
+      <p>{newTitle.description}</p>
       <p>{newTitle.content}</p>
+      <a href={newTitle.source.url}>Click to Different Site</a>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import TechPage from "./TechPage";
+//import TechPage from "./TechPage";
 export default function TechList(props) {
   return (
     <div>
@@ -12,7 +12,7 @@ export default function TechList(props) {
               <Link to={`/techpage/${info.title}`}>
                 <div>
                   <h2>{info.title}</h2>
-                  <img src={info.url} alt="image" />
+                  <img src={info.image} alt="many different image" />
                 </div>
               </Link>
             </div>

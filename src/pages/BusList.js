@@ -1,19 +1,23 @@
+import { Link } from "react-router-dom";
+
 export default function BusList(props) {
   return (
     <div>
-      <div>
-        <h1>hi</h1>
-      </div>
-      {props.busList.map((info) => {
-        return (
-          <>
+      {props.busList.length &&
+        props.busList.map((info) => {
+          console.log(info);
+          return (
             <div>
-              <h2>{info.title}</h2>
-              <img src={info.urlToImage} alt="image" />
+              <h1>Current Tech</h1>
+              <Link to={`/buspage/${info.title}`}>
+                <div>
+                  <h2>{info.title}</h2>
+                  <img src={info.image_url} alt="image1" />
+                </div>
+              </Link>
             </div>
-          </>
-        );
-      })}
+          );
+        })}
     </div>
   );
 }
