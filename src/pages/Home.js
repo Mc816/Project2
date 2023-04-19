@@ -1,25 +1,8 @@
 import { Link } from "react-router-dom";
 
-/*function newRoute() {
-  <Link to="/buslist">
-    <div className="span1" onClick={newRoute}>
-      Business News SnapShot
-    </div>
-  </Link>;
-}
-*/
 export default function Home() {
-  /*function newRoute() {
-    <Link to="/buslist">
-      <div className="span1" onClick={newRoute}>
-        Business News SnapShot
-      </div>
-    </Link>;
-  }
-  */
-
   return (
-    <>
+    <div className="home">
       <Link to="/buslist">
         <div className="bushome">Bussiness News SnapShot</div>
       </Link>
@@ -29,8 +12,8 @@ export default function Home() {
       </Link>
 
       <Link to="/toplist">
-        <div className="techhome">Top List</div>
+        <div className="tophome">Top List</div>
       </Link>
-    </>
+    </div>
   );
 }

@@ -12,7 +12,7 @@ export default function TechList(props) {
               <Link to={`/techpage/${info.title}`}>
                 <div>
                   <h2>{info.title}</h2>
-                  <img src={info.image} alt="many different image" />
+                  <img src={info.image} alt="many different pictures" />
                 </div>
               </Link>
             </div>

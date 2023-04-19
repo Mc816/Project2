@@ -1,27 +1,69 @@
 body {
- position: center;
+  position: absolute;
 }
-
 .home {
   display: flex;
-  justify-content: center;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 25vw;
+  padding-bottom: 5rem;
+  background-image: url('/public/breaking-news-just-in-3vizj6ilbelhlkvv.gif');
+
 }
 
-.bushome{ 
-  width: 50vw;
-  border: 10px solid black;
-  padding: 30px;
-  margin: 250px;
-}
-
+/*
 .span1 {
    display: "block" 
 }
+*/
+
+.techhome, .bushome, .tophome {
+  height: 200px;
+  width: 20rem;
+  height: 50rem;
+  border: 10px solid rgba(14, 148, 166, 0.446);
+  padding: 10px;
+  margin-bottom: 100rem;
+}
 
 .techhome {
-  width: 50vw;
-  border: 10px solid black;
-  padding: 30px;
-  margin: 250px;
+  background-image: url('/public/trevor-noah-the-daily-show-breaking-news-7u5z4ft89mf3p34g.gif');
+  background-size: 50vh;
+  background-position: center;
+  font-size: 5rem;
+
+
+}
+
+.bushome{
+  background-image: url('/public/greg-sarcasm.gif');
+  background-size: 50vh;
+  background-position: center;
+  font-size: 5rem;
+}
+
+.tophome {
+  background-image: url('/public/gif image.gif');
+  background-size: 50vh;
+  background-position: center;
+}
+
+.navcontainer {
+ display: flex;
+ flex-direction: row;
+ background-color: #e4b13166;
+ border: 10px lightblue solid;
+
+}
+
+.text {
+  margin: 2rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+}
+
+.link {
+  text-decoration: none;
 }
