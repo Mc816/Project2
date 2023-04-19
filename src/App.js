@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
-import BusList from "./pages/BusList";
-import BusPage from "./pages/BusPage";
-import TechList from "./pages/TechList";
-import TechPage from "./pages/TechPage";
+import MoreNewsList from "./pages/MoreNewsList";
+import MoreNewsPage from "./pages/MoreNewsPage";
+import CurrentNewsList from "./pages/CurrentNewsList";
+import CurrentNewsPage from "./pages/CurrentNewsPage";
 import TopList from "./pages/TopList";
 import TopPage from "./pages/TopPage";
 import { endPoint1, endPoint2, endPoint3 } from "./data";
@@ -17,8 +17,8 @@ import { endPoint1, endPoint2, endPoint3 } from "./data";
 export default function App() {
   const apiKey1 = process.env.REACT_APP_API_KEY;
 
-  const [techInfo, setTechInfo] = useState(endPoint2);
-  const [busInfo, setBusInfo] = useState(endPoint1);
+  const [currentNews, setCurrentNews] = useState(endPoint2);
+  const [moreNews, setMoreNews] = useState(endPoint1);
   const [topInfo, setTopInfo] = useState(endPoint3);
 
   const url = `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey1}`;
@@ -35,9 +35,9 @@ export default function App() {
       //const response3 = await axios.get(url3);
       //console.log(response.data);
       //Set back when ready to deploy and when completed
-      //setTechInfo(response.data.articles);
-      //setBusInfo(response2.data.articles);
-      console.log(busInfo);
+      //setCurrentNews(response.data.articles);
+      //setMoreNews(response2.data.articles);
+      //console.log(busInfo);
       //setTopInfo(response3.data.articles);
     } catch (err) {
       console.error(err);
@@ -55,14 +55,23 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/buslist" element={<BusList busList={busInfo} />} />
-        <Route path="/techlist" element={<TechList techList={techInfo} />} />
+        <Route
+          path="/morenewslist"
+          element={<MoreNewsList moreNewsList={moreNews} />}
+        />
+        <Route
+          path="/currentNewslist"
+          element={<CurrentNewsList currentNewsList={currentNews} />}
+        />
         <Route path="/toplist" element={<TopList topList={topInfo} />} />
         <Route
-          path="/techpage/:title"
-          element={<TechPage techList={techInfo} />}
+          path="/currentnewspage/:title"
+          element={<CurrentNewsPage currentNewsPage={currentNews} />}
         />
-        <Route path="/buspage/:title" element={<BusPage busList={busInfo} />} />
+        <Route
+          path="/morenewspage/:title"
+          element={<MoreNewsPage moreNewsPage={moreNews} />}
+        />
         <Route path="/toppage/:title" element={<TopPage topPage={topInfo} />} />
       </Routes>
     </div>

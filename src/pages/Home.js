@@ -4,15 +4,15 @@ export default function Home() {
   return (
     <div className="home">
       <Link to="/buslist">
-        <div className="bushome">Bussiness News SnapShot</div>
+        <div className="bushome">More News</div>
       </Link>
 
       <Link to="/techlist">
-        <div className="techhome">Tech News SnapShot</div>
+        <div className="techhome">Current News</div>
       </Link>
 
       <Link to="/toplist">
-        <div className="tophome">Top List</div>
+        <div className="tophome">Top News</div>
       </Link>
     </div>
   );

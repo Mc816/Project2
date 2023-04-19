@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
+//import { useState, useEffect } from "react";
+//import axios from "axios";
 
-export default function TopPage(props) {
+export default function CurrentNewsPage(props) {
   const params = useParams();
 
-  const titleParm2 = params.title;
+  const titleParm = params.title;
 
-  const newTitle = props.topPage.find((t) => {
-    return titleParm2 === t.title;
+  const newTitle = props.currentNewsPage.find((t) => {
+    return titleParm === t.title;
   });
   console.log(newTitle);
   const loaded = () => {
@@ -20,9 +22,10 @@ export default function TopPage(props) {
       </>
     );
   };
+
   const loading = () => {
     return <h1> No News to Display</h1>;
   };
-  //console.log(loading);
-  return props.topPage ? loaded() : loading();
+
+  return props.currentNewsPage ? loaded() : loading();
 }

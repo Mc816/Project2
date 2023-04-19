@@ -6,11 +6,11 @@ export default function Nav(props) {
       <Link to="/" className="link">
         <div className="text">Home</div>
       </Link>
-      <Link to="/buslist" className="link">
-        <div className="text">Business</div>
+      <Link to="/morenewslist" className="link">
+        <div className="text">More News</div>
       </Link>
-      <Link to="/techlist" className="link">
-        <div className="text">Tech</div>
+      <Link to="/currentNewslist" className="link">
+        <div className="text">Current News</div>
       </Link>
       <Link to="/toplist" className="link">
         <div className="text">Top News Stories</div>

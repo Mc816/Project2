@@ -1,28 +1,28 @@
 import { useParams } from "react-router-dom";
-
-export default function TopPage(props) {
+export default function MoreNewsPage(props) {
   const params = useParams();
 
-  const titleParm2 = params.title;
+  const titleParm = params.title;
 
-  const newTitle = props.topPage.find((t) => {
-    return titleParm2 === t.title;
+  const newTitle = props.moreNewsPage.find((t) => {
+    return titleParm === t.title;
   });
   console.log(newTitle);
   const loaded = () => {
     return (
       <>
         <h1>{newTitle.title}</h1>
-        <img src={newTitle.image} alt="many images" />
+        <img src={newTitle.image} alt="pictures" />
         <p>{newTitle.description}</p>
         <p>{newTitle.content}</p>
         <a href={newTitle.source.url}>Click to Different Site</a>
       </>
     );
   };
+
   const loading = () => {
     return <h1> No News to Display</h1>;
   };
-  //console.log(loading);
-  return props.topPage ? loaded() : loading();
+
+  return props.moreNewsPage ? loaded() : loading();
 }
