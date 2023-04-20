@@ -43,8 +43,13 @@ export default function App() {
       setTopInfo(response3.data.articles);
     } catch (err) {
       console.error(err);
+      return {
+        statusCode: 200,
+        body: response.data
+          ? JSON.stringify(response.data)
+          : "no-response-data-given",
+      };
     }
-    return { statusCode: 200, body: response.data ? JSON.stringify(response.data) : "no-response-data-given" } }
   };
   //fetch();
   useEffect(() => {
