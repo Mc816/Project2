@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios, { HttpStatusCode } from "axios";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import MoreNewsList from "./pages/MoreNewsList";
@@ -34,6 +34,7 @@ export default function App() {
       const response3 = await axios.get(
         `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=au&max=10&apikey=${apiKey1}`
       );
+      console.log(currentNews);
       //console.log(response.data);
       //Set back when ready to deploy and when completed
       setCurrentNews(response.data.articles);
@@ -43,6 +44,7 @@ export default function App() {
     } catch (err) {
       console.error(err);
     }
+    return { statusCode: 200, body: response.data ? JSON.stringify(response.data) : "no-response-data-given" } }
   };
   //fetch();
   useEffect(() => {
