@@ -48,7 +48,7 @@ export default function App() {
     fetch();
     //fetch();
     //fetch();
-  }, []);
+  });
 
   return (
     <div className="App">
