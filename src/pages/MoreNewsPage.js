@@ -13,8 +13,8 @@ export default function MoreNewsPage(props) {
       <div className="pages-container2">
         <h1 className="h1-text">{newTitle.title}</h1>
         <img src={newTitle.image} alt="pictures" className="page-image" />
-        <p>{newTitle.description}</p>
-        <p>{newTitle.content}</p>
+        <p className="description">{newTitle.description}</p>
+        <p className="content">{newTitle.content}</p>
         <a href={newTitle.source.url}>Click to Different Site</a>
       </div>
     );

@@ -4,7 +4,7 @@ export default function MoreNewsList(props) {
   return (
     <div className="full-container2">
       <div>
-        <h1 className="title">More News</h1>
+        <h1 className="title">News In Canada</h1>
       </div>
       <div className="morenewslist-container">
         {props.moreNewsList.length &&
@@ -12,7 +12,10 @@ export default function MoreNewsList(props) {
             console.log(info);
             return (
               <div>
-                <Link to={`/morenewspage/${info.title}`}>
+                <Link
+                  to={`/morenewspage/${info.title}`}
+                  className="link-container"
+                >
                   <div>
                     <h2 className="title-text">{info.title}</h2>
                     <img
@@ -29,7 +32,3 @@ export default function MoreNewsList(props) {
     </div>
   );
 }
-
-/*
-<img src={info.urlToImage} alt="image" />
-*/

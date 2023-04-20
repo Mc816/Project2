@@ -16,8 +16,8 @@ export default function CurrentNewsPage(props) {
       <div className="pages-container1">
         <h1 className="h1-text">{newTitle.title}</h1>
         <img src={newTitle.image} alt="many images" className="page-image" />
-        <p>{newTitle.description}</p>
-        <p>{newTitle.content}</p>
+        <p className="description">{newTitle.description}</p>
+        <p className="content">{newTitle.content}</p>
         <a href={newTitle.source.url}>Click to Different Site</a>
       </div>
     );

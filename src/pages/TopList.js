@@ -12,7 +12,10 @@ export default function TopList(props) {
             //console.log(info);
             return (
               <div>
-                <Link to={`/toppage/${topInfo.title}`}>
+                <Link
+                  to={`/toppage/${topInfo.title}`}
+                  className="link-container"
+                >
                   <div>
                     <h2 className="title-text">{topInfo.title}</h2>
                     <img
