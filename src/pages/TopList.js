@@ -4,7 +4,7 @@ export default function TopList(props) {
   return (
     <div className="full-container3">
       <div>
-        <h1 className="title">Top News Stories</h1>
+        <h1 className="title">Australia</h1>
       </div>
       <div className="toplist-container">
         {props.topList.length &&

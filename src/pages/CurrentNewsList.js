@@ -4,7 +4,7 @@ export default function CurrentNewsList(props) {
   return (
     <div className="full-container1">
       <div>
-        <h1 className="title">Current News</h1>;
+        <h1 className="title">US News</h1>
       </div>
       <div className="current-container">
         {props.currentNewsList.length &&

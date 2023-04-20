@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios, { HttpStatusCode } from "axios";
+import axios from "axios";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import MoreNewsList from "./pages/MoreNewsList";
@@ -43,12 +43,6 @@ export default function App() {
       setTopInfo(response3.data.articles);
     } catch (err) {
       console.error(err);
-      return {
-        statusCode: 200,
-        body: response.data
-          ? JSON.stringify(response.data)
-          : "no-response-data-given",
-      };
     }
   };
   //fetch();
