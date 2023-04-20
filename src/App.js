@@ -22,18 +22,18 @@ export default function App() {
   const [moreNews, setMoreNews] = useState([]);
   const [topInfo, setTopInfo] = useState([]);
 
-  const url = `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey1}`;
-
-  const url2 = `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=ca&max=10&apikey=${apiKey1}`;
-
-  const url3 = `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=au&max=10&apikey=${apiKey1}`;
-
   const fetch = async () => {
     try {
       //Set back when I am done
-      const response = await axios.get(url);
-      const response2 = await axios.get(url2);
-      const response3 = await axios.get(url3);
+      const response = await axios.get(
+        `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey1}`
+      );
+      const response2 = await axios.get(
+        `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=ca&max=10&apikey=${apiKey1}`
+      );
+      const response3 = await axios.get(
+        `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=au&max=10&apikey=${apiKey1}`
+      );
       //console.log(response.data);
       //Set back when ready to deploy and when completed
       setCurrentNews(response.data.articles);
