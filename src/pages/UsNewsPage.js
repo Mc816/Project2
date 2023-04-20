@@ -7,7 +7,7 @@ export default function CurrentNewsPage(props) {
 
   const titleParm = params.title;
 
-  const newTitle = props.currentNewsPage.find((t) => {
+  const newTitle = props.usNewsPage.find((t) => {
     return titleParm === t.title;
   });
   console.log(newTitle);
@@ -27,5 +27,5 @@ export default function CurrentNewsPage(props) {
     return <h1> No News to Display</h1>;
   };
 
-  return props.currentNewsPage ? loaded() : loading();
+  return props.usNewsPage ? loaded() : loading();
 }

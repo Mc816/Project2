@@ -4,7 +4,7 @@ export default function MoreNewsPage(props) {
 
   const titleParm = params.title;
 
-  const newTitle = props.moreNewsPage.find((t) => {
+  const newTitle = props.caNewsPage.find((t) => {
     return titleParm === t.title;
   });
   console.log(newTitle);
@@ -24,5 +24,5 @@ export default function MoreNewsPage(props) {
     return <h1> No News to Display</h1>;
   };
 
-  return props.moreNewsPage ? loaded() : loading();
+  return props.caNewsPage ? loaded() : loading();
 }

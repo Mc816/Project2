@@ -6,13 +6,13 @@ export default function Nav(props) {
       <Link to="/" className="link">
         <div className="text">Home</div>
       </Link>
-      <Link to="/morenewslist" className="link">
+      <Link to="/caNewslist" className="link">
         <div className="text">Canada News</div>
       </Link>
-      <Link to="/currentNewslist" className="link">
+      <Link to="/usNewslist" className="link">
         <div className="text">US News</div>
       </Link>
-      <Link to="/toplist" className="link">
+      <Link to="/auNewslist" className="link">
         <div className="text">Australia News</div>
       </Link>
     </div>

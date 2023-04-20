@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
-import MoreNewsList from "./pages/MoreNewsList";
-import MoreNewsPage from "./pages/MoreNewsPage";
-import CurrentNewsList from "./pages/CurrentNewsList";
-import CurrentNewsPage from "./pages/CurrentNewsPage";
-import TopList from "./pages/TopList";
-import TopPage from "./pages/TopPage";
+import CaNewsList from "./pages/CaNewsList";
+import CaNewsPage from "./pages/CaNewsPage";
+import UsNewsList from "./pages/UsNewsList";
+import UsNewsPage from "./pages/UsNewsPage";
+import AuNewsList from "./pages/AuNewsList";
+import AuNewsPage from "./pages/AuNewsPage";
 //import { endPoint1, endPoint2, endPoint3 } from "./data";
 //import data from "../data";
 
@@ -18,9 +18,9 @@ import TopPage from "./pages/TopPage";
 export default function App() {
   const apiKey1 = process.env.REACT_APP_API_KEY;
 
-  const [currentNews, setCurrentNews] = useState([]);
-  const [moreNews, setMoreNews] = useState([]);
-  const [topInfo, setTopInfo] = useState([]);
+  const [usNews, setUsNews] = useState([]);
+  const [caNews, setCaNews] = useState([]);
+  const [auNews, setAuNews] = useState([]);
 
   const fetch = async () => {
     try {
@@ -34,13 +34,13 @@ export default function App() {
       const response3 = await axios.get(
         `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=au&max=10&apikey=${apiKey1}`
       );
-      console.log(currentNews);
+      //console.log(currentNews);
       //console.log(response.data);
       //Set back when ready to deploy and when completed
-      setCurrentNews(response.data.articles);
-      setMoreNews(response2.data.articles);
+      setUsNews(response.data.articles);
+      setCaNews(response2.data.articles);
       //console.log(busInfo);
-      setTopInfo(response3.data.articles);
+      setAuNews(response3.data.articles);
     } catch (err) {
       console.error(err);
     }
@@ -58,23 +58,29 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="/morenewslist"
-          element={<MoreNewsList moreNewsList={moreNews} />}
+          path="/caNewslist"
+          element={<CaNewsList caNewsList={caNews} />}
         />
         <Route
-          path="/currentNewslist"
-          element={<CurrentNewsList currentNewsList={currentNews} />}
-        />
-        <Route path="/toplist" element={<TopList topList={topInfo} />} />
-        <Route
-          path="/currentnewspage/:title"
-          element={<CurrentNewsPage currentNewsPage={currentNews} />}
+          path="/usNewslist"
+          element={<UsNewsList usNewsList={usNews} />}
         />
         <Route
-          path="/morenewspage/:title"
-          element={<MoreNewsPage moreNewsPage={moreNews} />}
+          path="/auNewslist"
+          element={<AuNewsList auNewsList={auNews} />}
         />
-        <Route path="/toppage/:title" element={<TopPage topPage={topInfo} />} />
+        <Route
+          path="/usNewsPage/:title"
+          element={<UsNewsPage usNewsPage={usNews} />}
+        />
+        <Route
+          path="/caNewsPage/:title"
+          element={<CaNewsPage caNewsPage={caNews} />}
+        />
+        <Route
+          path="/auNewsPage/:title"
+          element={<AuNewsPage auNewsPage={auNews} />}
+        />
       </Routes>
     </div>
   );

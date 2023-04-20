@@ -6,14 +6,14 @@ export default function CurrentNewsList(props) {
       <div>
         <h1 className="title">US News</h1>
       </div>
-      <div className="current-container">
-        {props.currentNewsList.length &&
-          props.currentNewsList.map((info) => {
+      <div className="container">
+        {props.usNewsList.length &&
+          props.usNewsList.map((info) => {
             console.log(info);
             return (
               <div>
                 <Link
-                  to={`/currentnewspage/${info.title}`}
+                  to={`/usNewsPage/${info.title}`}
                   className="link-container"
                 >
                   <div>
@@ -21,7 +21,7 @@ export default function CurrentNewsList(props) {
                     <img
                       src={info.image}
                       alt="many different pictures"
-                      className="current-image"
+                      className="image"
                     />
                   </div>
                 </Link>

@@ -9,12 +9,7 @@
   width: auto;
   height: auto;
 }
-/*
-html, body {
-  height: 100%;
-  width: 100%;
-}
-*/
+
 
 .full-container1{
   position: absolute;
@@ -32,17 +27,14 @@ html, body {
   /*background-size: contain;*/
 }
 
-/*
- background-size: contain;
-   position: absolute;
- */
+
 .full-container3 {
   position: absolute;
   height: 100vh;
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,116,0.3449754901960784) 35%, rgba(0,212,255,1) 100%);
 }
-.current-container, .toplist-container, .morenewslist-container {
+.container {
   box-sizing: border-box ;
   padding: 50px;  
   display: grid;
@@ -65,7 +57,7 @@ html, body {
 }
 
 
-.current-image, .morenews-image, .topList-image {
+.image {
   width: 100%;
   height: 100%;
   
@@ -86,7 +78,7 @@ html, body {
 }
 
 
-.techhome, .bushome, .tophome {
+.ushome, .cahome, .auhome {
   justify-content: center;
   box-sizing: border-box;
   display: flex;
@@ -101,7 +93,7 @@ html, body {
 .font {
   font-size: 20px;
 }
-.techhome {
+.ushome {
   background-image: url('/public/trevor-noah-the-daily-show-breaking-news-7u5z4ft89mf3p34g.gif');
   background-size: 50vh;
   background-position: center;
@@ -114,7 +106,7 @@ html, body {
 
 }
 
-.bushome{
+.cahome{
   background-image: url('/public/greg-sarcasm.gif');
   background-size: 50vh;
   background-position: center;
@@ -125,7 +117,7 @@ html, body {
   text-decoration: none;
 }
 
-.tophome {
+.auhome {
   background-image: url('/public/gif image.gif');
   background-size: 50vh;
   font-weight: bold;
@@ -232,17 +224,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(5,105,223,1) 10
   font-size: 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-/*
 
-.link-container > h2 {
-  text-decoration: none;
-}
-
-.text-current {
-  text-decoration: none;
-}
-
-*/
 .link {
   text-decoration: none;
 }
@@ -259,12 +241,3 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(5,105,223,1) 10
 }
 
 
-/*
-Link > h2{
-  text-decoration: none;
-}
-
-.current-text {
-  text-decoration: none;
-}
-*/

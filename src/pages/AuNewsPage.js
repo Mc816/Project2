@@ -5,7 +5,7 @@ export default function TopPage(props) {
 
   const titleParm2 = params.title;
 
-  const newTitle = props.topPage.find((t) => {
+  const newTitle = props.auNewsPage.find((t) => {
     return titleParm2 === t.title;
   });
   console.log(newTitle);
@@ -24,5 +24,5 @@ export default function TopPage(props) {
     return <h1> No News to Display</h1>;
   };
   //console.log(loading);
-  return props.topPage ? loaded() : loading();
+  return props.auNewsPage ? loaded() : loading();
 }
