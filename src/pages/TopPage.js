@@ -11,13 +11,13 @@ export default function TopPage(props) {
   console.log(newTitle);
   const loaded = () => {
     return (
-      <>
-        <h1>{newTitle.title}</h1>
-        <img src={newTitle.image} alt="many images" />
+      <div className="pages-container3">
+        <h1 className="h1-text">{newTitle.title}</h1>
+        <img src={newTitle.image} alt="many images" className="page-image" />
         <p>{newTitle.description}</p>
         <p>{newTitle.content}</p>
         <a href={newTitle.source.url}>Click to Different Site</a>
-      </>
+      </div>
     );
   };
   const loading = () => {

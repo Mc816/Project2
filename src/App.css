@@ -1,16 +1,44 @@
-App {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-body {
+
+*{
   margin: 0;
+  padding: 0;
 }
 
-.current-container {
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.full-container1{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background-size: cover;
+}
+
+.full-container2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,216,45,0.7287289915966386) 100%);
+  background-size: contain;
+}
+
+.full-container3 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,116,0.3449754901960784) 35%, rgba(0,212,255,1) 100%);
+  background-size: contain;
+}
+.current-container, .toplist-container, .morenewslist-container {
   box-sizing: border-box ;
-  padding: 20px;  
+  padding: 15px;  
   display: grid;
   grid-template-columns: repeat(4 , 1fr) 1fr;
   grid-auto-rows: 300px;
@@ -21,6 +49,12 @@ body {
   display: flex;
   justify-content: center;
 
+}
+
+.title-text {
+  font-size: medium;
+  text-decoration: none;
+  color: black;
 }
 /* {
   /*flex-grow: 1;*//*
@@ -35,41 +69,55 @@ body {
 }
 */
 
-.current-image, .morenews-image {
+.current-image, .morenews-image, .topList-image {
   width: 100%;
   height: 100%;
   
 }
 .home {
+  position: absolute;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 25vw;
-  padding-bottom: 5rem;
-  background-image: url('/public/breaking-news-just-in-3vizj6ilbelhlkvv.gif');
+  width: 91vw;
+  min-height: 100vh;
+  padding: 20vh;
+  padding-left: 0vw;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(5,105,223,1) 100%);
+  background-size: contain;
+  justify-content: space-evenly;
+  
+  /*
+  background-image: url('/public/breaking-news-just-in-3vizj6ilbelhlkvv.gif')
+  */
 
 }
 
-/*
-.span1 {
-   display: "block" 
-}
-*/
 
 .techhome, .bushome, .tophome {
-  height: 200px;
-  width: 20rem;
-  height: 50rem;
-  border: 10px solid rgba(14, 148, 166, 0.446);
-  padding: 10px;
-  margin-bottom: 100rem;
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 30vw;
+  height: 30vh;
+  border: 10px solid rgba(216, 226, 227, 0.916);
+  padding: 5px;
+  margin-bottom: 100vh;
+
 }
 
+.font {
+  font-size: 20px;
+}
 .techhome {
   background-image: url('/public/trevor-noah-the-daily-show-breaking-news-7u5z4ft89mf3p34g.gif');
   background-size: 50vh;
   background-position: center;
-  font-size: 5rem;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-items: center;
+  text-decoration: none;
 
 
 }
@@ -78,34 +126,133 @@ body {
   background-image: url('/public/greg-sarcasm.gif');
   background-size: 50vh;
   background-position: center;
-  font-size: 5rem;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-items: center;
+  text-decoration: none;
 }
 
 .tophome {
   background-image: url('/public/gif image.gif');
   background-size: 50vh;
+  font-weight: bold;
+  font-size: 50px;
+  align-items: center;
   background-position: center;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* Pages Container for currentnews*/
+.pages-container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  background: rgb(2,0,36);
+  background: repeating-linear-gradient(45deg, #29820b, #df2e2e 10px, #074378 10px, #1ad133 20px);
+
+}
+
+/* Pages Container for morenews*/
+.pages-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(121,48,9,0.8468677494199536) 35%, rgba(0,212,255,1) 100%);
+  
+}
+
+/* Pages Container for toppagesnews*/
+.pages-container3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, #e66465, #9198e5);
+}
+
+
+/*float: ; */
+
+/* image css for the page section */
+.page-image {
+  height: 50vh;
+  width: 50vw;
+  border: 10px, solid, black;
+}
+/* Nav container */
 .navcontainer {
  display: flex;
  flex-direction: row;
- background-color: #e4b13166;
- border: 10px lightblue solid;
-
+ justify-content: center;
+ border: 10px  rgba(255, 255, 255, 0.693) solid;
+ width: 99vw;
+ height: 10vh;
+ background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(5,105,223,1) 100%);
 }
 
+
+/* Text for nav bar */
 .text {
-  margin: 2rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 10vh;
+  padding-right: 10vh;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  color: black;
   font-size: large;
+  background-size: cover;
+  text-decoration: none;
+}
+
+
+.current-link-text{
+  text-decoration: none;
+}
+
+/* h1 text for pages*/
+.h1-text {
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+/*
+
+.link-container > h2 {
+  text-decoration: none;
 }
 
 .text-current {
   text-decoration: none;
 }
+
+*/
 .link {
   text-decoration: none;
 }
+
+.current-link-text {
+  text-decoration: none;
+  color:black;
+  font-size: 30px;
+}
+/*
+Link > h2{
+  text-decoration: none;
+}
+
+.current-text {
+  text-decoration: none;
+}
+*/

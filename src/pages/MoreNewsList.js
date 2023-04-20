@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 export default function MoreNewsList(props) {
   return (
-    <>
+    <div className="full-container2">
       <div>
-        <h1>Current Tech</h1>
+        <h1 className="title">More News</h1>
       </div>
-      <div className="current-container">
+      <div className="morenewslist-container">
         {props.moreNewsList.length &&
           props.moreNewsList.map((info) => {
             console.log(info);
@@ -14,7 +14,7 @@ export default function MoreNewsList(props) {
               <div>
                 <Link to={`/morenewspage/${info.title}`}>
                   <div>
-                    <h2>{info.title}</h2>
+                    <h2 className="title-text">{info.title}</h2>
                     <img
                       src={info.image}
                       alt="image1"
@@ -26,7 +26,7 @@ export default function MoreNewsList(props) {
             );
           })}
       </div>
-    </>
+    </div>
   );
 }
 

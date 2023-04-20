@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 //import TechPage from "./TechPage";
 export default function CurrentNewsList(props) {
   return (
-    <>
+    <div className="full-container1">
       <div>
-        <h1 className="title">More News</h1>;
+        <h1 className="title">Current News</h1>;
       </div>
       <div className="current-container">
         {props.currentNewsList.length &&
@@ -12,9 +12,12 @@ export default function CurrentNewsList(props) {
             console.log(info);
             return (
               <div>
-                <Link to={`/currentnewspage/${info.title}`}>
+                <Link
+                  to={`/currentnewspage/${info.title}`}
+                  className="link-container"
+                >
                   <div>
-                    <h2 className="text-current">{info.title}</h2>
+                    <h2 className="title-text">{info.title}</h2>
                     <img
                       src={info.image}
                       alt="many different pictures"
@@ -26,6 +29,6 @@ export default function CurrentNewsList(props) {
             );
           })}
       </div>
-    </>
+    </div>
   );
 }

@@ -1,27 +1,36 @@
 import { Link } from "react-router-dom";
-//import TopPage from "./TopPage";
 
 export default function TopList(props) {
   return (
-    <div>
-      {props.topList.length &&
-        props.topList.map((topInfo) => {
-          //console.log(info);
-          return (
-            <div>
-              <h1>Current Tech</h1>
-              <Link to={`/toppage/${topInfo.title}`}>
-                <div>
-                  <h2>{topInfo.title}</h2>
-                  <img src={topInfo.image} alt="image2" />
-                </div>
-              </Link>
-            </div>
-          );
-        })}
+    <div className="full-container3">
+      <div>
+        <h1 className="title">Top News Stories</h1>
+      </div>
+      <div className="toplist-container">
+        {props.topList.length &&
+          props.topList.map((topInfo) => {
+            //console.log(info);
+            return (
+              <div>
+                <Link to={`/toppage/${topInfo.title}`}>
+                  <div>
+                    <h2 className="title-text">{topInfo.title}</h2>
+                    <img
+                      src={topInfo.image}
+                      alt="image2"
+                      className="topList-image"
+                    />
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
+      </div>
     </div>
+  );
+}
 
-    /*
+/*
     <div>
       <div>
         <h1>hi</h1>
@@ -40,5 +49,3 @@ export default function TopList(props) {
       })}
     </div>
     */
-  );
-}
