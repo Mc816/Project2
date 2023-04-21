@@ -9,6 +9,7 @@ The technologies used in this project include:
 CSS
 React
 JSX
+JavaScript
 React-Router-Dom
 Axios
 
