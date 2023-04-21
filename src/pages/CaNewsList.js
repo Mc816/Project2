@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-export default function MoreNewsList(props) {
+export default function CaNewsList(props) {
   return (
     <div className="full-container2">
       <div>
-        <h1 className="title">News In Canada</h1>
+        <h1 className="title">Canada News</h1>
       </div>
       <div className="container">
         {props.caNewsList.length &&

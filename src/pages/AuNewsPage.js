@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-export default function TopPage(props) {
+export default function AuNewsPage(props) {
   const params = useParams();
 
   const titleParm2 = params.title;
@@ -16,7 +16,6 @@ export default function TopPage(props) {
         <img src={newTitle.image} alt="many images" className="page-image" />
         <p className="description">{newTitle.description}</p>
         <p className="content">{newTitle.content}</p>
-        <a href={newTitle.source.url}>Click to Different Site</a>
       </div>
     );
   };

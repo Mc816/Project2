@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom";
-//import { useState, useEffect } from "react";
-//import axios from "axios";
 
-export default function CurrentNewsPage(props) {
+export default function UsNewsPage(props) {
   const params = useParams();
 
   const titleParm = params.title;
@@ -18,7 +16,6 @@ export default function CurrentNewsPage(props) {
         <img src={newTitle.image} alt="many images" className="page-image" />
         <p className="description">{newTitle.description}</p>
         <p className="content">{newTitle.content}</p>
-        <a href={newTitle.source.url}>Click to Different Site</a>
       </div>
     );
   };

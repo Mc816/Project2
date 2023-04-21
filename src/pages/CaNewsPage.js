@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-export default function MoreNewsPage(props) {
+export default function CaNewsPage(props) {
   const params = useParams();
 
   const titleParm = params.title;
@@ -15,7 +15,6 @@ export default function MoreNewsPage(props) {
         <img src={newTitle.image} alt="pictures" className="page-image" />
         <p className="description">{newTitle.description}</p>
         <p className="content">{newTitle.content}</p>
-        <a href={newTitle.source.url}>Click to Different Site</a>
       </div>
     );
   };

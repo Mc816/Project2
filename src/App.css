@@ -70,8 +70,7 @@
   height: 100vh;
   padding: 20vh;
   padding-left: 10vw;
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(5,105,223,1) 100%);
+  background: lightblue;
   background-size: contain;
   justify-content: space-evenly;
 
@@ -238,6 +237,12 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(5,105,223,1) 10
 /* To get ride of the underlining on all the links on the list pages */
 .link-container {
   text-decoration: none;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  background: lightblue;
 }
 
 

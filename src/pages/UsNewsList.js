@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-//import TechPage from "./TechPage";
-export default function CurrentNewsList(props) {
+
+export default function UsNewsList(props) {
   return (
     <div className="full-container1">
       <div>

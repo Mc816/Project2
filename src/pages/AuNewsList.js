@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-export default function TopList(props) {
+export default function AuNewsList(props) {
   return (
     <div className="full-container3">
       <div>
-        <h1 className="title">Australia</h1>
+        <h1 className="title">Australia News</h1>
       </div>
       <div className="container">
         {props.auNewsList.length &&
